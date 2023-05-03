@@ -1,0 +1,79 @@
+/* Sass Variables*/
+/* Sass Lists*/
+/* Maps*/
+/* Color*/
+/* Footer links*/
+/* Sass Mixins*/
+/* Footer Links mixin*/
+/* Button Function*/
+/* Button Function Style Group*/
+/* Font Awesome*/
+/* Flex mixins*/
+/* Sass Mixins*/
+/* Breakpoints mixins*/
+/* Media queries for Desktop*/
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+  body .section__function__container .btn__function__select__container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 15px;
+  }
+  body .section__function__container .btn__function__select__container .btn__function__select {
+    width: 100%;
+  }
+  body .menu__main__container .menu__main__content {
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+  body .menu__main__container .menu__main__content .menu__main__title {
+    justify-content: center;
+  }
+  body footer {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: normal;
+    align-items: center;
+  }
+  body footer .footer__title .footer__title__h3 {
+    margin-left: 9px;
+    margin-right: 26.42px;
+  }
+  body footer .footer__link__container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 38px;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w168_h19 {
+    gap: 7px;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w168_h19 .footer__link {
+    width: 100%;
+    height: 19px;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w130_h20 {
+    gap: 1rem;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w130_h20 .footer__link__icon__box .footer__link {
+    width: 100%;
+    height: 20px;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w168_h19,
+  body footer .footer__link__container .footer__link__icon__box__w130_h20 {
+    display: flex;
+    flex-flow: row;
+  }
+  body footer .footer__link__container .footer__link__icon__box__w168_h19 .footer__link,
+  body footer .footer__link__container .footer__link__icon__box__w130_h20 .footer__link {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=desktop.css.map */

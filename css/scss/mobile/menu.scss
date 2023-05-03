@@ -1,0 +1,459 @@
+/* Sass Style*/
+/* Version: 1.62.0 compiled with dart2js 2.19.6*/
+/* Output StyleSheet Compress*/
+
+/* Google Fonts Import*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
+/* Sass Variables*/
+$btn_gradient_color: #ff79da;
+$primary: #9356dc;
+@mixin background__primary__opacify {
+  background: mix($primary, #fff, 15%);
+}
+
+/* Sass Lists*/
+$radius-top-15px: 15px 15px 0 0;
+$font-weight: 300 500 700;
+
+/*---- Maps ----//*/
+
+/* Color*/
+$color-map: (
+  background__grey: #f7f7f7,
+  primary: #9356dc,
+  secondary: #fca311,
+  green__light: #99e2d0,
+  green__dark: #008766,
+  blue__light: #89c8fa,
+  blue__dark: #003a68,
+  white__normal: #ffffff,
+  black__normal: #101010,
+  grey__dark: #353535,
+  grey__light: #eaeaea,
+  btn_gradient_color: #ff79da,
+);
+
+/* Border-radius*/
+$raduis-btn: (
+  low: 20px,
+  high: 25px,
+  card: 15px,
+);
+/* Font parameters*/
+$font-size: (
+  mini: 14px,
+  mini__plus: 17px,
+  low: 18px,
+  mid: 16px,
+  high: 24px,
+);
+$line-height: (
+  mini: 16px,
+  mini__plus: 20px,
+  low: 21px,
+  mid: 19px,
+  high: 28px,
+);
+/* Shadow*/
+$box-shadow: (
+  shadow__card: 0px 4px 10px rgba(0, 0, 0, 0.25),
+  shadow__card-out: 0px 2px 8px rgba(0, 0, 0, 0.25),
+  shadow__menu__card: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1),
+);
+/* Gap btn*/
+$gap-function_btn_mobile: (
+  function_btn1_mobile: 1rem,
+  /* function_btn1_mobile: 27px,*/ function_btn2_mobile: 1rem,
+  /* function_btn2_mobile: 23px,*/ function_btn3_mobile: 1rem,
+  /* function_btn3_mobile: 20px,*/
+);
+$gap-function_btn_tablet-desktop: (
+  function_btn1_tablet-desktop: 1rem,
+  /* function_btn1_tablet-desktop: 26.65px,*/ function_btn2_tablet-desktop: 1rem,
+  /* function_btn2_tablet-desktop: 22.14px,*/ function_btn3_tablet-desktop: 1rem,
+  /* function_btn3_tablet-desktop: 17.64px,*/
+);
+$footer_links_block_A: (
+  width: 168px,
+  height: 19px,
+);
+$footer_links_block_B: (
+  width: 130px,
+  height: 20px,
+);
+$footer_links_block_A_tablet: (
+  width: 100%,
+  height: 19px,
+);
+$footer_links_block_B_tablet: (
+  width: 100%,
+  height: 20px,
+);
+/* Footer Links mixin*/
+@mixin footer-links-w168-h19 {
+  width: map-get($footer_links_block_A, width);
+  height: map-get($footer_links_block_A, height);
+}
+@mixin footer-links-w130-h20 {
+  width: map-get($footer_links_block_B, width);
+  height: map-get($footer_links_block_B, height);
+}
+
+/* Breakpoint*/
+$breakpoint: (
+  tablette: 768px,
+  desktop: 1024px,
+);
+/* Sass Mixins*/
+/* Breakpoints mixins*/
+@mixin breakpoint__tablette {
+  min-width: map-get($breakpoint, tablette);
+}
+@mixin breakpoint__desktop {
+  min-width: map-get($breakpoint, desktop);
+}
+@mixin breakpoint__desktop__margin {
+  @media screen and (min-width: map-get($breakpoint, desktop)) {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+}
+/* Font Awesome*/
+@mixin Font__Awesome__icons-sizer($size) {
+  width: $size;
+  height: $size;
+}
+/* Font style famlily...*/
+@mixin font__Roboto-normal() {
+  font-family: 'Roboto';
+  font-style: normal;
+}
+@mixin title__menu__page() {
+  font-family: 'Shrikhand';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+}
+/* Title style famlily...*/
+@mixin title__font-style-family() {
+  @include font__Roboto-normal();
+  font-weight: nth($font-weight, 3);
+  font-size: map-get($font-size, high);
+  line-height: map-get($line-height, high);
+}
+/* Text paragraph style famlily...*/
+@mixin text__pragraph {
+  @include font__Roboto-normal();
+  font-weight: nth($font-weight, 1);
+  font-size: map-get($font-size, low);
+  line-height: map-get($line-height, low);
+  text-align: center;
+}
+/* Button Function style famlily...*/
+@mixin button__functions {
+  @include font__Roboto-normal();
+  font-weight: nth($font-weight, 2);
+  font-size: map-get($font-size, mid);
+  line-height: map-get($line-height, mid);
+}
+/* Flex mixins*/
+@mixin flex($flex-flow) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: $flex-flow;
+  flex-flow: $flex-flow;
+}
+@mixin justify_content__align_items__center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin btn__function__style__1__icon-size {
+  width: 13.02px;
+  height: 19.9px;
+}
+@mixin btn__function__style__2__icon-size {
+  width: 16px;
+  height: 15.92px;
+}
+@mixin btn__function__style__3__icon-size {
+  width: 18px;
+  height: 17.91px;
+}
+/* Button text styles*/
+@mixin btn__text__style {
+  @include font__Roboto-normal();
+  font-weight: nth($font-weight, 2);
+  font-size: 16px;
+  line-height: 19px;
+}
+/* Button Gradient Color*/
+@mixin btn__gradient {
+  background: -o-linear-gradient($btn_gradient_color, $primary);
+  background: -webkit-gradient(linear, left top, left bottom, from($btn_gradient_color), to($primary));
+  background: linear-gradient($btn_gradient_color, $primary);
+  @include btn__text__style();
+  color: map-get($color-map, white__normal);
+}
+/* Footer Title*/
+@mixin footer__font-style-family {
+  font-family: 'Shrikhand';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Boxes*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Menu Page*/
+.menu__main__container {
+  @include flex(column);
+  .menu__main__content {
+    border-radius: 40px 40px 0 0;
+    background: map-get($color-map, background__grey);
+    .menu__main__title {
+      @include flex(row);
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 17px;
+      gap: 24px;
+      // position: relative;
+      .menu__main__title__h2 {
+        @include title__menu__page();
+      }
+    }
+    .menu__main__section__container {
+      @include flex(column);
+      gap: 40px;
+      padding: 0 12px;
+      .menu__main__section__choice__green_line {
+        border: solid 1.5px map-get($color-map, green__light);
+        width: 40px;
+        margin-bottom: 12px;
+        margin-top: 6px;
+      }
+      .menu__main__section__choice__title {
+        .menu__main__section__choice__title__paragraph {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+      .menu__main__section__choice__container {
+        @include flex(column);
+        gap: 12px;
+      }
+    }
+    .btn__gradient__buy__box {
+      @include flex(row);
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 40px 0;
+    }
+  }
+  .menu__main__picture__container {
+    width: 100%;
+    height: 213px;
+  }
+  .menu__main__picture {
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    z-index: -3;
+    width: 100%;
+    height: 275px;
+    border-radius: -25px;
+  }
+  .menu__main__section__choice {
+    @include flex(row);
+    -webkit-box-shadow: map-get($box-shadow, shadow__menu__card);
+    box-shadow: map-get($box-shadow, shadow__menu__card);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 16px;
+    background: map-get($color-map, white__normal);
+    .menu__main__section__choice__icon__box {
+      display: none;
+    }
+    .menu__main__section__choice__card {
+      @include flex(row);
+      width: 100%;
+      .menu__main__section__choice__card__title__paragraph__container {
+        @include flex(row);
+        gap: 7px;
+        width: 100%;
+        .menu__main__section__choice__card__title__container {
+          padding: 12px 0 12px 15px;
+          width: 90%;
+        }
+        .menu__main__section__choice__card__h3,
+        .menu__main__section__choice__card__paragraph {
+          margin: 0;
+          width: 287px;
+        }
+        .menu__main__section__choice__card__h3 {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          height: 21px;
+          width: 100%;
+        }
+        .menu__main__section__choice__card__paragraph {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 15.0431px;
+          line-height: 18px;
+          height: 19px;
+          width: 100%;
+        }
+      }
+      .menu__main__section__choice__card__title__price__box {
+        @include flex(column);
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+        .menu__main__section__choice__card__title__price {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .menu__main__section__choice:hover {
+    cursor: pointer;
+  }
+}
+
+/* Menu*/
+.menu__title__h2 {
+  @include title__menu__page();
+}
+
+.menu__main__section__choice__icon__box {
+  @include flex(row);
+  align-items: center;
+  position: relative;
+}
+label {
+  height: 69px;
+  cursor: pointer;
+}
+.menu__main__section__choice__icon__like__container {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+}
+.menu__main__section__choice__card {
+  .menu__main__section__choice__card__title__paragraph__container {
+    width: 100%;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .menu__main__section__choice__card__title__container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      input[type='checkbox'] {
+        display: none;
+        appearance: none;
+      }
+    }
+    .fa-solid_fa-circle-check__box {
+      @include flex(row);
+      align-items: center;
+      label {
+        input[type='checkbox']:checked + i.fa-solid.fa-circle-check {
+          @include flex(row);
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    .fa-solid_fa-circle-check__box {
+      label {
+        i.fa-solid.fa-circle-check {
+          display: none;
+          color: #fff;
+          background: map-get($color-map, green__light);
+          font-size: 25px;
+          width: 59px;
+          height: 69px;
+          border-radius: 0 16px 16px 0;
+        }
+      }
+    }
+  }
+
+  // .menu__main__section__choice__card__title__price__box {
+  //   padding-right: 15px;
+  // }
+}
+.card__link__figcaption__like_unlike__box {
+  @include flex(row);
+  align-items: center;
+  width: 24px;
+}
+
+.card__link__figcaption__unlike__box {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label i.fa-regular {
+      display: none;
+    }
+  }
+}
+
+.card__link__figcaption__like__box {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label i.fa-solid {
+      display: none;
+    }
+  }
+}
+.fa-heart {
+  @include Font__Awesome__icons-sizer(24px);
+  color: map-get($color-map, primary);
+  font-size: 21px;
+  line-height: 21px;
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+}

@@ -1,0 +1,135 @@
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
+// Maps
+
+// Color
+$color-map: (
+  background__grey: #f7f7f7,
+  primary: #9356dc,
+  secondary: #fca311,
+  green__light: #99e2d0,
+  green__dark: #008766,
+  blue__light: #89c8fa,
+  blue__dark: #003a68,
+  white__normal: #ffffff,
+  black__normal: #101010,
+  grey__dark: #353535,
+  grey__light: #eaeaea,
+  btn_gradient_color: #ff79da,
+);
+
+// Shadow
+$box-shadow: (
+  shadow__card: 0px 4px 10px rgba(0, 0, 0, 0.25),
+  shadow__card-out: 0px 2px 8px rgba(0, 0, 0, 0.25),
+  shadow__menu__card: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1),
+);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  background-color: #2c3a47;
+  .loader__box {
+    .loader__title__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64.44px;
+      // box-shadow: map-get($box-shadow, shadow__card);
+      .loader__title {
+        margin: 0;
+        font-family: 'Shrikhand';
+        width: 100%;
+      }
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fd7272;
+      height: 650px;
+      line-height: 650px;
+      .loader {
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        //   box-shadow: map-get($box-shadow, shadow__card);
+        display: inline-block;
+      }
+      .loader__quart {
+        position: relative;
+        border-radius: 50px;
+        border: 6px solid rgba(255, 255, 255, 0.4);
+      }
+      .loader__quart2 {
+        position: relative;
+        left: -34.5px;
+        border-radius: 50px;
+        border: 6px solid rgba(255, 255, 255, 0.4);
+      }
+      .loader__quart::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        border-radius: 50px;
+        border: 6px solid transparent;
+        border-top: 6px solid map-get($color-map, white__normal);
+        animation: spin 1s linear 0s 5;
+      }
+      .loader__quart2::after {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        bottom: -6px;
+        right: -6px;
+        border-radius: 50px;
+        border: 6px solid transparent;
+        border-top: 6px solid map-get($color-map, white__normal);
+        animation: spin 1s alternate 0.3s 5;
+      }
+      .loader__text__translate {
+        animation: translate 2s linear 0s;
+      }
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes translate {
+    0% {
+      transform: translate(50%);
+    }
+    50% {
+      transform: translate(100%);
+    }
+    75% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: scale(1%);
+    }
+    85% {
+      transform: skew(100deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

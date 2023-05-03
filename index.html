@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/loader/scss/loader.scss" />
+    <link
+      rel="stylesheet"
+      href="css/scss/mobile/style.scss" />
+    <link
+      rel="stylesheet"
+      href="css/media_query/mobile/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/media_query/tablet/tablet.css" />
+    <link
+      rel="stylesheet"
+      href="css/media_query/desktop/desktop.css" />
+    <script
+      src="https://kit.fontawesome.com/3fa10e7671.js"
+      crossorigin="anonymous"></script>
+    <title>Oh My Food</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__logo__location__container">
+        <div class="header__logo__container__home_page">
+          <div class="header__logo__box">
+            <img
+              src="images/logo/ohmyfood.png"
+              alt="logo_du_site"
+              class="header__logo" />
+          </div>
+        </div>
+        <div class="header__location__bar__container">
+          <div class="location__bar__box__container">
+            <div class="location__dot__box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="location__bar__box">
+              <form>
+                <input
+                  type="text"
+                  class="location__bar"
+                  id="location__bar"
+                  placeholder="Paris, Belleville"
+                  disabled />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="info__top__container">
+      <div class="info__top__title">
+        <h2 class="info__top__title__h2">Réservez le menu qui vous convient</h2>
+      </div>
+      <div class="info__top__text">
+        <p class="info__top__text__paragraph">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+      </div>
+      <div class="info__top__button">
+        <a
+          href="#title__section__resto__h2"
+          class="btn btn__round btn__gradient">
+          Explorez nos restaurants
+        </a>
+      </div>
+    </div>
+    <section class="section__function__container">
+      <div class="title__section__function">
+        <h2 class="title__section__function__h2">Fonctionnement</h2>
+      </div>
+      <ol class="btn__function__select__container">
+        <li class="btn__function__select btn btn__round btn__wide btn__grey">
+          <div class="btn__function__select__choice__number__box">
+            <span class="btn__function__select__choice__number">1</span>
+          </div>
+          <div class="btn__function__select__icon__title__box">
+            <div class="btn__function__select__icon__box">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <span class="choice__title">Choisissez un restaurant</span>
+          </div>
+        </li>
+        <li class="btn__function__select btn btn__round btn__wide btn__grey">
+          <div class="btn__function__select__choice__number__box">
+            <span class="btn__function__select__choice__number">2</span>
+          </div>
+          <div class="btn__function__select__icon__title__box">
+            <div class="btn__function__select__icon__box">
+              <i class="fa-solid fa-list"></i>
+            </div>
+            <span class="choice__title">Composez votre menu</span>
+          </div>
+        </li>
+        <li class="btn__function__select btn btn__round btn__wide btn__grey">
+          <div class="btn__function__select__choice__number__box">
+            <span class="btn__function__select__choice__number">3</span>
+          </div>
+          <div class="btn__function__select__icon__title__box">
+            <div class="btn__function__select__icon__box">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <span class="choice__title">Dégustez au restaurant</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="section__resto">
+      <div class="title__section__resto">
+        <h2
+          class="title__section__resto__h2"
+          id="title__section__resto__h2">
+          Restaurants
+        </h2>
+      </div>
+      <div class="card__container">
+        <article class="card">
+          <a
+            href="menu__page1.html"
+            class="card__link">
+            <img
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="photo_illustration_restaurant"
+              class="card__link__picture" />
+            <span class="text__new text__new__top1">Nouveau</span>
+          </a>
+          <a
+            href="menu__page1.html"
+            class="card__link__ficaption__link__box">
+            <div class="card__link__ficaption__box">
+              <div class="card__link__figcaption">
+                <h3 class="card__link__figcaption__h3">La palette du goût</h3>
+                <p class="card__link__figcaption__paragraph">Ménilmontant</p>
+              </div>
+            </div>
+          </a>
+          <div class="card__link__figcaption__like_unlike">
+            <form class="card__link__figcaption__form">
+              <div class="card__link__figcaption__like__box">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__like"
+                  class="card__link__figcaption__like__heart"
+                  checked />
+                <label for="heart__like"><i class="fa-solid fa-heart"></i></label>
+              </div>
+              <div class="card__link__figcaption__unlike__box">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__unlike"
+                  class="card__link__figcaption__unlike__heart" />
+                <label for="heart__unlike"><i class="fa-regular fa-heart"></i></label>
+              </div>
+            </form>
+          </div>
+        </article>
+        <article class="card">
+          <a
+            href="menu__page3.html"
+            class="card__link">
+            <img
+              src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="photo_illustration_restaurant"
+              class="card__link__picture" />
+            <span class="text__new text__new__top2">Nouveau</span>
+          </a>
+          <a
+            href="menu__page3.html"
+            class="card__link__ficaption__link__box">
+            <div class="card__link__ficaption__box">
+              <div class="card__link__figcaption">
+                <h3 class="card__link__figcaption__h3">La note enchantée</h3>
+                <p class="card__link__figcaption__paragraph">Charonne</p>
+              </div>
+            </div>
+          </a>
+          <div class="card__link__figcaption__like_unlike">
+            <form class="card__link__figcaption__form">
+              <div class="card__link__figcaption__like__box2">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__like2"
+                  class="card__link__figcaption__like__heart" />
+                <label for="heart__like2"><i class="fa-solid fa-heart"></i></label>
+              </div>
+              <div class="card__link__figcaption__unlike__box2">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__unlike2"
+                  class="card__link__figcaption__unlike__heart"
+                  checked />
+                <label for="heart__unlike2"><i class="fa-regular fa-heart"></i></label>
+              </div>
+            </form>
+          </div>
+        </article>
+        <article class="card">
+          <a
+            href="menu__page4.html"
+            class="card__link">
+            <img
+              src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="photo_illustration_restaurant"
+              class="card__link__picture" />
+            <span class="text__new text__new__bottom1">Nouveau</span>
+          </a>
+          <a
+            href="menu__page4.html"
+            class="card__link__ficaption__link__box">
+            <div class="card__link__ficaption__box">
+              <div class="card__link__figcaption">
+                <h3 class="card__link__figcaption__h3">À la française</h3>
+                <p class="card__link__figcaption__paragraph">Cité Rouge</p>
+              </div>
+            </div>
+          </a>
+          <div class="card__link__figcaption__like_unlike">
+            <form class="card__link__figcaption__form">
+              <div class="card__link__figcaption__like__box3">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__like3"
+                  class="card__link__figcaption__like__heart"
+                  checked />
+                <label for="heart__like3"><i class="fa-solid fa-heart"></i></label>
+              </div>
+              <div class="card__link__figcaption__unlike__box3">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__unlike3"
+                  class="card__link__figcaption__unlike__heart" />
+                <label for="heart__unlike3"><i class="fa-regular fa-heart"></i></label>
+              </div>
+            </form>
+          </div>
+        </article>
+        <article class="card">
+          <a
+            href="menu__page2.html"
+            class="card__link">
+            <img
+              src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="photo_illustration_restaurant"
+              class="card__link__picture" />
+            <span class="text__new text__new__bottom2">Nouveau</span>
+          </a>
+          <a
+            href="menu__page2.html"
+            class="card__link__ficaption__link__box">
+            <div class="card__link__ficaption__box">
+              <div class="card__link__figcaption">
+                <h3 class="card__link__figcaption__h3">Le délice des sens</h3>
+                <p class="card__link__figcaption__paragraph">Folie-Méricourt</p>
+              </div>
+            </div>
+          </a>
+          <div class="card__link__figcaption__like_unlike">
+            <form class="card__link__figcaption__form">
+              <div class="card__link__figcaption__like__box4">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__like4"
+                  class="card__link__figcaption__like__heart"
+                  checked />
+                <label for="heart__like4"><i class="fa-solid fa-heart"></i></label>
+              </div>
+              <div class="card__link__figcaption__unlike__box4">
+                <input
+                  type="radio"
+                  name="heart"
+                  id="heart__unlike4"
+                  class="card__link__figcaption__unlike__heart" />
+                <label for="heart__unlike4"><i class="fa-regular fa-heart"></i></label>
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__title">
+        <h3 class="footer__title__h3">ohmyfood</h3>
+      </div>
+      <div class="footer__link__container">
+        <div class="footer__link__icon__box__w168_h19">
+          <div class="footer__link__icon__box">
+            <i class="fa-sharp fa-solid fa-utensils"></i>
+            <a
+              href=""
+              class="footer__link"
+              >Proposer un restaurant</a
+            >
+          </div>
+          <div class="footer__link__icon__box">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <a
+              href=""
+              class="footer__link"
+              >Devenir partenaire</a
+            >
+          </div>
+        </div>
+        <div class="footer__link__icon__box__w130_h20">
+          <div class="footer__link__icon__box">
+            <a
+              href=""
+              class="footer__link"
+              >Mention légales</a
+            >
+          </div>
+          <div class="footer__link__icon__box">
+            <a
+              href="mailto:exemple@email.com"
+              class="footer__link"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
