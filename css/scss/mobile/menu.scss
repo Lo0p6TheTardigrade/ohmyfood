@@ -291,6 +291,7 @@ $breakpoint: (
     justify-content: space-between;
     border-radius: 16px;
     background: map-get($color-map, white__normal);
+    height: 69px;
     animation: slide-right 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     transition: background 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     .menu__main__section__choice__icon__box {
@@ -301,46 +302,41 @@ $breakpoint: (
       width: 100%;
       .menu__main__section__choice__card__title__paragraph__container {
         @include flex(row);
+        justify-content: end;
         gap: 7px;
         width: 100%;
         .menu__main__section__choice__card__title__container {
-          padding: 12px 0 12px 15px;
+          // padding: 12px 0 12px 15px;
           @include flex(column);
-          // justify-content: center;
-          // gap: 5px;
-          // padding-left: 15px;
+          gap: 5px;
+          padding-left: 15px;
           width: 100%;
-          height: 69px;
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden;
+          pointer-events: auto;
         }
         .menu__main__section__choice__card__h3,
         .menu__main__section__choice__card__paragraph {
           margin: 0;
           font-family: 'Roboto';
           font-style: normal;
-          // height: 34.5px;
+          height: 34.5px;
           width: 100%;
-          // width: 287px;
         }
         .menu__main__section__choice__card__h3 {
-          display: block;
+          @include flex(row wrap);
+          align-content: end;
           font-weight: 500;
           font-size: 18px;
           line-height: 21px;
-          // margin-top: 13.5px;
-          height: 21px;
-          padding-bottom: 2.5px;
         }
         .menu__main__section__choice__card__paragraph {
-          display: block;
+          @include flex(row wrap);
+          align-content: start;
           font-weight: 300;
           font-size: 15.0431px;
           line-height: 18px;
-          // margin-bottom: 15.5px;
-          height: 19px;
-          padding-top: 2.5px;
         }
       }
       .menu__main__section__choice__card__title__price__box {
@@ -359,16 +355,11 @@ $breakpoint: (
           font-weight: 700;
           font-size: 15.0431px;
           line-height: 18px;
-          /* identical to box height */
-
-          display: flex;
-          align-items: flex-end;
-          text-align: center;
         }
       }
     }
   }
-  .menu__main__section__choice:hover {
+  .menu__main__section__choice {
     cursor: pointer;
   }
 }
@@ -391,7 +382,6 @@ label {
   @include flex(row);
   align-items: center;
   justify-content: center;
-  transition: all 1.5s;
 }
 .menu__main__section__choice__card {
   .menu__main__section__choice__card__title__paragraph__container {
@@ -402,7 +392,8 @@ label {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      animation: slide-right 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: scale-up-bottom 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.3s;
+      opacity: 0;
 
       .menu__main__section__choice__card__title__container {
         display: flex;
@@ -418,8 +409,9 @@ label {
     .fa-solid_fa-circle-check__box {
       @include flex(row);
       align-items: center;
-      // animation: show-fa 2s ease-in-out forwards;
-      // opacity: 0;
+      animation: show-fa 2s ease-in-out forwards;
+      transition: all 1.5s;
+      opacity: 0;
       label {
         border-radius: 0 16px 16px 0;
         background: map-get($color-map, green__light);
@@ -428,30 +420,17 @@ label {
           align-items: center;
           justify-content: center;
         }
-      }
-    }
-    .fa-solid_fa-circle-check__box {
-      label {
         i.fa-solid.fa-circle-check {
           display: none;
+          border-radius: 59px;
           color: #fff;
           font-size: 25px;
           width: 59px;
           height: 69px;
+          animation: rotate-center 0.6s linear both;
         }
       }
     }
-  }
-  .fa-solid_fa-circle-check__box {
-    @include flex(row);
-    align-items: center;
-    animation: show-fa 2s ease-in-out forwards;
-    transition: all 1.5s;
-    opacity: 0;
-  }
-  i.fa-circle-check {
-    animation: rotate-center 0.6s linear both;
-    border-radius: 59px;
   }
 }
 @keyframes show-fa {
@@ -487,9 +466,19 @@ label {
     transform: translateX(0px);
   }
 }
+@keyframes slide-top {
+  0% {
+    transform: translateY(-1500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes slide-left {
   0% {
-    transform: translateX(69pxpx);
+    transform: translateX(69px);
   }
   100% {
     transform: translateX(0px);
@@ -500,19 +489,25 @@ label {
   0% {
     transform: scale(0.5);
     transform-origin: 50% 100%;
+    opacity: 0;
   }
   100% {
     transform: scale(1);
     transform-origin: 50% 100%;
+    opacity: 1;
   }
 }
 // Progressive fill
 @keyframes fill-color {
   0% {
-    background-size: 0 100%;
+    background-size: 0 24px;
+    opacity: 0;
+    // width: 0;
   }
   100% {
-    background-size: 100% 100%;
+    background-size: 24px 24px;
+    opacity: 1;
+    // width: 24px;
   }
 }
 .card__link__figcaption__like_unlike__box {
