@@ -217,7 +217,9 @@ $breakpoint: (
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+body {
+  animation: opacimation-reverse 1s linear both;
+}
 /* Menu Page*/
 .menu__main__container {
   @include flex(column);
@@ -409,9 +411,8 @@ label {
     .fa-solid_fa-circle-check__box {
       @include flex(row);
       align-items: center;
-      animation: show-fa 2s ease-in-out forwards;
-      transition: all 1.5s;
-      opacity: 0;
+      // animation: show-check 2s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
+      // opacity: 0;
       label {
         border-radius: 0 16px 16px 0;
         background: map-get($color-map, green__light);
@@ -433,7 +434,59 @@ label {
     }
   }
 }
-@keyframes show-fa {
+
+.card__link__figcaption__like_unlike__box {
+  @include flex(row);
+  align-items: center;
+  width: 24px;
+}
+
+.card__link__figcaption__unlike__box {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label i.fa-regular {
+      display: none;
+    }
+  }
+}
+
+.card__link__figcaption__like__box {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label i.fa-solid {
+      display: none;
+    }
+  }
+}
+.fa-heart {
+  @include Font__Awesome__icons-sizer(24px);
+  // color: map-get($color-map, primary);
+  background-image: linear-gradient($btn_gradient_color, $primary);
+  font-size: 21px;
+  line-height: 21px;
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fill-color 0.5s ease-in-out forwards;
+}
+
+// Animation
+//----------------------------------------------------------------
+
+@keyframes show-check {
   from {
     opacity: 0;
     transform: translateX(100%);
@@ -443,8 +496,6 @@ label {
     transform: translateX(0);
   }
 }
-// Animation
-//----------------------------------------------------------------
 // Rotating
 @keyframes rotate-center {
   0% {
@@ -502,58 +553,17 @@ label {
   0% {
     background-size: 0 24px;
     opacity: 0;
-    // width: 0;
   }
   100% {
     background-size: 24px 24px;
     opacity: 1;
-    // width: 24px;
   }
 }
-.card__link__figcaption__like_unlike__box {
-  @include flex(row);
-  align-items: center;
-  width: 24px;
-}
-
-.card__link__figcaption__unlike__box {
-  @include flex(row);
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  input[type='radio'] {
-    display: none;
-
-    &:checked + label i.fa-regular {
-      display: none;
-    }
+@keyframes opacimation-reverse {
+  0% {
+    opacity: 0;
   }
-}
-
-.card__link__figcaption__like__box {
-  @include flex(row);
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  input[type='radio'] {
-    display: none;
-
-    &:checked + label i.fa-solid {
-      display: none;
-    }
+  100% {
+    opacity: 1;
   }
-}
-.fa-heart {
-  @include Font__Awesome__icons-sizer(24px);
-  // color: map-get($color-map, primary);
-  background-image: linear-gradient($btn_gradient_color, $primary);
-  font-size: 21px;
-  line-height: 21px;
-  position: absolute;
-  z-index: 2;
-  top: 24px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fill-color 2s ease-in-out forwards;
 }
