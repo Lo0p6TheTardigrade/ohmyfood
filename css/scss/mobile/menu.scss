@@ -311,7 +311,6 @@ body {
           width: 100%;
           .menu__main__section__choice__card__title__container {
             @include flex(column);
-            gap: 5px;
             padding-left: 15px;
             width: 100%;
             -o-text-overflow: ellipsis;
@@ -340,7 +339,7 @@ body {
           .menu__main__section__choice__card__paragraph {
             font-weight: 300;
             font-size: 15.0431px;
-            line-height: 18px;
+            line-height: 25px;
           }
         }
         .menu__main__section__choice__card__title__price__box {
