@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass -w ./css/scss/mobile/style.scss:./css/media_query/mobile/style.css -s compressed ./css/scss/mobile/menu.scss:./css/media_query/mobile/menu.css -s compressed ./css/scss/tablet/tablet.scss:./css/media_query/tablet/tablet.css -s compressed ./css/scss/desktop/desktop.scss:./css/media_query/desktop/desktop.css -s compressed ./css/loader/scss/loader.scss:./css/loader/loader.css -s compressed",
-    "prefix": "postcss --parser postcss-scss ./css/scss/mobile/style.scss ./css/scss/tablet/tablet.scss ./css/scss/desktop/desktop.scss ./css/loader/scss/loader.scss -r -u autoprefixer"
+    "prefix": "postcss --parser postcss-scss ./css/scss/mobile/style.scss ./css/scss/tablet/tablet.scss ./css/scss/desktop/desktop.scss ./css/loader/scss/loader.scss ./css/scss/mobile/menu.scss -r -u autoprefixer"
   },
   "author": "",
   "license": "ISC",
